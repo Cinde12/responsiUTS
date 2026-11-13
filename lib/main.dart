@@ -23,16 +23,36 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFF673AB7), // Ungu Material (Deep Purple)
-            primary: const Color(0xFF5E35B1), // Warna ungu AppBar yang pekat
+            seedColor: const Color(0xFFD32F2F), // Merah Crimson Tegas
+            primary: const Color(0xFFB71C1C), // Merah Gelap Utama
+            secondary: const Color(0xFFFFA000), // Aksen Emas / Amber Maskulin
+            surface: const Color(0xFF1E1E24), // Permukaan kartu gelap
+            onSurface: Colors.white, // Teks putih tajam di atas latar gelap
+            brightness: Brightness.dark,
           ),
+          scaffoldBackgroundColor: const Color(
+            0xFF121215,
+          ), // Hitam Obsidian (Deep Dark)
           appBarTheme: const AppBarTheme(
-            backgroundColor: Color(
-              0xFF5E35B1,
-            ), // Memaksa warna latar AppBar ungu
-            foregroundColor:
-                Colors.white, // Warna teks dan ikon di AppBar menjadi putih
-            centerTitle: false,
+            centerTitle: true,
+            backgroundColor: Color(0xFF18181D), // Header hitam karbon
+            foregroundColor: Colors.white, // Judul & ikon profil putih terang
+            elevation: 4,
+          ),
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            backgroundColor: Color(0xFFD32F2F), // Tombol + Merah Sangar
+            foregroundColor: Colors.white,
+          ),
+          cardTheme: CardThemeData(
+            color: const Color(0xFF1E1E24),
+            elevation: 3,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(
+                color: Color(0xFF33333D), // Garis tepi abu-abu baja
+                width: 1,
+              ),
+            ),
           ),
         ),
         home: const HomeScreen(),
